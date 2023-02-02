@@ -9,4 +9,5 @@ edition = "2021"
 actix-web = "4"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 
-
+[target.x86_64-apple-darwin]
+rustflags = ["-C", "link-arg=-fuse-ld=/usr/local/bin/zld"]
