@@ -16,5 +16,8 @@ name = "zero2prod"
 actix-web = "4"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 
-[target.x86_64-apple-darwin]
+[dev-dependencies]
+reqwest = "0.11"
+
+[target.x86_64-pc-windows-msvc]
 rustflags = ["-C", "link-arg=-fuse-ld=/usr/local/bin/zld"]
